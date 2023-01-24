@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/friendsFragment">
+
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.fundsindiatask.ui.friends.FriendsListFragment"
+        android:label="fragment_friendsList"
+        tools:layout="@layout/fragment_friends_list" >
+
+        <action
+            android:id="@+id/action_friendsFragment_to_friendDetailFragment"
+            app:destination="@id/friendDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/numbersFragment"
+        android:name="com.example.fundsindiatask.ui.numbers.NumbersListFragment"
+        android:label="fragment_numbersList"
+        tools:layout="@layout/fragment_numbers_list"
+        >
+
+        <action
+            android:id="@+id/action_numbersFragment_to_numberDetailFragment"
+            app:destination="@id/numberDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendDetailFragment"
+        android:name="com.example.fundsindiatask.ui.friends.FriendsDetailFragment"
+        android:label="fragment_friendsDet"
+        tools:layout="@layout/fragment_friends_detail" >
+        <action
+            android:id="@+id/action_friendDetailFragment_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/numberDetailFragment"
+        android:name="com.example.fundsindiatask.ui.numbers.NumberDetailFragment"
+        android:label="fragment_numbersDet"
+        tools:layout="@layout/fragment_number_detail" >
+        <action
+            android:id="@+id/action_numberDetailFragment_to_numbersFragment"
+            app:destination="@id/numbersFragment" />
+    </fragment>
+
+</navigation>
